@@ -1,68 +1,87 @@
-# LLM-Based Smart Contract Security Analysis
+> This project demonstrates how LLMs can be manipulated via prompt injection and how to defend against it.
+# LLM-Based Smart Contract Security Analyzer
 
-## Project Overview
-This project focuses on detecting vulnerabilities in Ethereum smart contracts using a Large Language Model (LLM). 
-
-The system analyzes Solidity code and evaluates the robustness of LLMs against prompt injection attacks.
+This project analyzes Solidity smart contracts using a Large Language Model (LLM) and detects potential vulnerabilities while being resilient to prompt injection attacks.
 
 ---
 
-## Objectives
-- Detect smart contract vulnerabilities (e.g. reentrancy)
-- Evaluate LLM reliability
-- Test prompt injection attacks
-- Improve robustness using guardrails
+## Features
+
+- Smart contract vulnerability analysis
+- Prompt injection attack detection
+- Guardrail-based secure evaluation
+- Structured security report generation
+- CLI-based interaction
 
 ---
 
-## Technologies Used
-- Python
-- Solidity
-- Meta Llama 3
-- Machine Learning
-- Blockchain
+## Motivation
+
+LLMs can be manipulated via prompt injection attacks, especially when analyzing untrusted code.
+
+This project demonstrates how to:
+- Detect malicious instructions embedded in code
+- Ignore adversarial inputs (SYSTEM NOTICE, VERIFICATION)
+- Focus only on logical contract analysis
 
 ---
 
 ## How It Works
-1. Smart contract code is loaded
-2. A structured prompt is generated
-3. LLM analyzes the contract
-4. Vulnerabilities are detected
-5. Results are evaluated
+
+1. User selects a contract (safe or vulnerable)
+2. Contract is sent to LLM API
+3. Guardrails filter malicious patterns
+4. Model generates structured security report
 
 ---
 
-## Experiments
+## Demo
 
-| Test | Scenario | Result |
-|------|--------|--------|
-| 1 | Vulnerable contract | Reentrancy detected |
-| 2 | Prompt Injection | Model failed |
-| 3 | Guardrails applied | Model recovered |
-| 4 | Safe contract | False positive |
+### CLI Interface
+![CLI](images/cli.png)
 
----
+### Prompt Injection Attack Example
+![Attack](images/attack.png)
 
-## Key Findings
-- LLMs can detect vulnerabilities effectively
-- Prompt injection significantly affects reliability
-- Guardrails improve robustness
-- False positives still exist
+### Secure Analysis Output
+![Safe](images/safe.png)
 
 ---
 
-## Example Output
-(Add screenshot here)
+## Security Approach
+
+- Prompt sanitization
+- Ignoring external instructions inside code
+- Focus on Solidity logic only
+- Defensive prompt engineering
+
+---
+
+## Example Use Cases
+
+- Smart contract auditing support
+- AI security research
+- LLM robustness testing
+
+---
+
+## Tech Stack
+
+- Python
+- LLM API (LLaMA / OpenAI compatible)
+- Prompt Engineering
+- Cybersecurity concepts
 
 ---
 
 ## Future Improvements
-- Reduce false positives
-- Improve prompt robustness
-- Extend to multiple vulnerability types
+
+- Static analysis integration
+- Web interface
+- Multi-contract batch analysis
 
 ---
 
 ## Author
+
 Dilara Ulutaş
